@@ -6,4 +6,6 @@
     <string name="button_download">Download</string>
     <string name="look_code_of_this_project">Look code of this project</string>
     <string name="open_git_source">Open git</string>
+    <string name="pre_Text">S:</string>
+    <string name="post_Text">F:</string>
 </resources>
