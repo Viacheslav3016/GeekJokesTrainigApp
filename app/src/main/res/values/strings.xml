@@ -2,8 +2,13 @@
     <string name="app_name">GeekJokes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="download_joking">Download joking</string>
+    <string name="download_joking">Download Event</string>
     <string name="button_download">Download</string>
     <string name="look_code_of_this_project">Look code of this project</string>
-    <string name="open_git_source">Open git</string>
+    <string name="open_git_source">Open in git</string>
+    <string name="pre_Text">T</string>
+    <string name="post_Text">L</string>
+    <string name="button_next">next</string>
+    <string name="button_back">back</string>
+    <string name="newevent_newevent_newevent">newEvent newEvent newEvent</string>
 </resources>

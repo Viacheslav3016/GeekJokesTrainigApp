@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0.7dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LinearL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:background="#CCFFCC"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/tv_typeEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_SetupActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Programming" />
+
+        <TextView
+            android:id="@+id/tvPreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/pre_Text"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_typeEvent" />
+
+        <View
+            android:id="@+id/viewVertical"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_link"
+            app:layout_constraintStart_toEndOf="@id/tvPreText"
+            app:layout_constraintTop_toBottomOf="@+id/tv_typeEvent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@color/black"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/viewVertical"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_link"
+            app:layout_constraintTop_toBottomOf="@+id/tv_typeEvent"
+            />
+
+        <TextView
+            android:id="@+id/tv_SetupActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvPreText"
+            app:layout_constraintTop_toBottomOf="@id/tv_typeEvent"
+            android:text="@string/newevent_newevent_newevent" />
+
+        <TextView
+            android:id="@+id/tv_PostText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/post_Text"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPreText" />
+
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_PostText"
+            app:layout_constraintTop_toBottomOf="@id/tv_SetupActivity"
+            tools:text="link" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
