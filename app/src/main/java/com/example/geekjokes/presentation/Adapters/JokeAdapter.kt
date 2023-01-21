@@ -4,25 +4,27 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.geekjokes.databinding.ProgJokeItemBinding
-import com.example.geekjokes.model.JokeItem
+import com.example.geekjokes.databinding.RecyclerEventItemBinding
+import com.example.geekjokes.model.Event
 import com.example.geekjokes.presentation.Utils.DiffCallBack
 
-class JokeAdapter(private val names: List<String>) : ListAdapter<JokeItem, JokeAdapter.JokeViewHolder>(DiffCallBack())  {
+class JokeAdapter() : ListAdapter<Event, JokeAdapter.JokeViewHolder>(DiffCallBack())  {
+
+    val listStart = emptyList<Event>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JokeAdapter.JokeViewHolder {
-        val binding = (ProgJokeItemBinding.inflate(LayoutInflater.from(parent.context),parent, false))
+        val binding = (RecyclerEventItemBinding.inflate(LayoutInflater.from(parent.context),parent, false))
         return JokeViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: JokeViewHolder, position: Int) {
-        holder.binding.tvTypeJoke.text = names[position]
-        holder.binding.tvSetupJoke.text = names[position]
-        holder.binding.tvJokePunchline.text = names[position]
+        holder.binding.tvTypeEvent.text = listStart[position].toString()
+        holder.binding.tvLink.text = listStart[position].toString()
+        holder.binding.tvSetupActivity.text = listStart[position].toString()
     }
 
     override fun getItemCount(): Int {
-        return names.size
+        return listStart.size
     }
-    inner class JokeViewHolder(val binding:ProgJokeItemBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class JokeViewHolder(val binding:RecyclerEventItemBinding) : RecyclerView.ViewHolder(binding.root)
 }

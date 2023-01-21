@@ -1,14 +1,14 @@
 package com.example.geekjokes.presentation.Utils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.geekjokes.model.JokeItem
+import com.example.geekjokes.model.Event
 
-class DiffCallBack: DiffUtil.ItemCallback<JokeItem>() {
-    override fun areItemsTheSame(oldItem: JokeItem, newItem: JokeItem): Boolean {
-        return oldItem.id == newItem.id
+class DiffCallBack: DiffUtil.ItemCallback<Event>() {
+    override fun areItemsTheSame(oldItem: Event, newItem: Event): Boolean {
+        return oldItem.type == newItem.type
     }
 
-    override fun areContentsTheSame(oldItem: JokeItem, newItem: JokeItem): Boolean {
+    override fun areContentsTheSame(oldItem: Event, newItem: Event): Boolean {
         return oldItem == newItem
     }
 }
